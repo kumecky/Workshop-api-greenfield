@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Reservation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 3rem;
+            border-radius: 0.3rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Room Reservation System</h1>
+            <p class="lead">Manage meeting room reservations efficiently with our easy-to-use system.</p>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    Welcome to the Room Reservation System. Use the tools below to manage your reservations and view room availability.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Calendar image">
+                    <div class="card-body">
+                        <h5 class="card-title">Calendar View</h5>
+                        <p class="card-text">View all reservations in a calendar format with filtering options.</p>
+                        <a href="/calendar.html" class="btn btn-primary">Open Calendar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" class="card-img-top" alt="Rooms image">
+                    <div class="card-body">
+                        <h5 class="card-title">Room Directory</h5>
+                        <p class="card-text">Browse all available rooms and their features.</p>
+                        <a href="#" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1579389083395-4507e98b5e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="API Documentation image">
+                    <div class="card-body">
+                        <h5 class="card-title">API Documentation</h5>
+                        <p class="card-text">Explore our API documentation with Swagger UI.</p>
+                        <a href="/swagger" class="btn btn-success">View API Docs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Latest Announcements
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">New Calendar Feature Released!</h5>
+                        <p class="card-text">We're excited to announce our new interactive calendar feature that allows you to view and manage room reservations with ease.</p>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li>Filter reservations by room or user</li>
+                            <li>View reservations in day, week, month, or list format</li>
+                            <li>Color-coded reservation status for quick identification</li>
+                            <li>Detailed reservation information with one click</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5 text-center text-muted">
+            <p>&copy; 2023 Room Reservation System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

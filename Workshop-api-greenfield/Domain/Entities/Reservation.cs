@@ -48,6 +48,11 @@ namespace Workshop_api_greenfield.Domain.Entities
         public string? Purpose { get; set; }
 
         /// <summary>
+        /// Gets or sets additional notes about the reservation.
+        /// </summary>
+        public string? Notes { get; set; }
+
+        /// <summary>
         /// Gets or sets the status of the reservation.
         /// </summary>
         public ReservationStatus Status { get; set; } = ReservationStatus.Pending;

@@ -57,5 +57,15 @@ namespace Workshop_api_greenfield.Application.Services
         /// <param name="id">The ID of the reservation to delete.</param>
         /// <returns>True if the reservation was deleted, false otherwise.</returns>
         Task<bool> DeleteAsync(Guid id);
+
+        /// <summary>
+        /// Gets reservations within a specified date range with optional filtering by room and user.
+        /// </summary>
+        /// <param name="startDate">The start date of the range.</param>
+        /// <param name="endDate">The end date of the range.</param>
+        /// <param name="roomIds">Optional room IDs to filter by. If null or empty, includes all rooms.</param>
+        /// <param name="userId">Optional user ID to filter by. If null, includes all users.</param>
+        /// <returns>A collection of reservations matching the specified criteria.</returns>
+        Task<IEnumerable<Reservation>> GetForCalendarAsync(DateTime startDate, DateTime endDate, List<Guid>? roomIds = null, Guid? userId = null);
     }
 } 

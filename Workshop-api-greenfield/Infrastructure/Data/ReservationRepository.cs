@@ -90,5 +90,29 @@ namespace Workshop_api_greenfield.Infrastructure.Data
             await _context.SaveChangesAsync();
             return true;
         }
+
+        /// <inheritdoc/>
+        public async Task<IEnumerable<Reservation>> GetForCalendarAsync(DateTime startDate, DateTime endDate, List<Guid>? roomIds = null, Guid? userId = null)
+        {
+            // Start with a query that includes all reservations in the date range
+            var query = _context.Reservations
+                .Include(r => r.Room)
+                .Include(r => r.User)
+                .Where(r => r.StartTime < endDate && r.EndTime > startDate);
+
+            // Apply room filter if provided
+            if (roomIds != null && roomIds.Any())
+            {
+                query = query.Where(r => roomIds.Contains(r.RoomId));
+            }
+
+            // Apply user filter if provided
+            if (userId.HasValue)
+            {
+                query = query.Where(r => r.UserId == userId.Value);
+            }
+
+            return await query.ToListAsync();
+        }
     }
 } 
